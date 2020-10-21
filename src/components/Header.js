@@ -15,6 +15,8 @@ const AppHeader = styled.header`
     text-align: center;
     padding: 10px 0;
     position: fixed;
+    top: 0;
+    right: 0;
     width: 100vw;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 

@@ -25,7 +25,6 @@ export default function Movies() {
 }
 
 const MainTitle = styled.h2`
-    padding-top: 80px;
     font-size: 20px;
     text-align: center;
 `;
