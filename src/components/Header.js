@@ -19,6 +19,7 @@ const AppHeader = styled.header`
     right: 0;
     width: 100vw;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
 
     h1 {
         font-size: 28px;

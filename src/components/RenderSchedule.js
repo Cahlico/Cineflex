@@ -11,7 +11,7 @@ export default function RenderSchedule(props) {
             <Date>{weekday} - {date}</Date>
 
             {showtimes.map(time => (
-                <Link to={{ pathname: '/Seats', state: {showtimes, date, id}}}>
+                <Link to={{ pathname: '/Seats', state: {time, date, id}}}>
                     <Button>{time.name}</Button>
                 </Link>
             ))}
@@ -30,4 +30,5 @@ const Button = styled.button`
     padding: .5em .7em;
     border-radius: 3px;
     margin: 0 20px;
+    outline-style: none;
 `;

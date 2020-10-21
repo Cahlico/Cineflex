@@ -12,7 +12,7 @@ export default function Timetable() {
     const timeTable = state.days;
 
     return (
-        <>
+        <article>
             <ScheduleTitle>Selecione o horário</ScheduleTitle>
             <Schedule>
                 {timeTable.map(i => (
@@ -28,10 +28,10 @@ export default function Timetable() {
 
             <Footer 
                 id = {state.id}
-                weekday = {null}
+                time = {null}
                 date = {null}
             />
-        </>
+        </article>
     );
 }
 

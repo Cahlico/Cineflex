@@ -5,7 +5,7 @@ import MoviesContext from '../contexts/MoviesContext';
 
 export default function Footer(props) {
 
-    const { id, weekday, date} = props;
+    const { id, time, date} = props;
     let img;
     let title;
     const { movies } = useContext(MoviesContext);
@@ -25,8 +25,8 @@ export default function Footer(props) {
             </span>
             <span>
                 <p>{title}</p>
-                {weekday
-                ? <p>{weekday} - {date}</p>
+                {time
+                ? <p>{time} - {date}</p>
                 : ''
                 }
             </span>
@@ -54,5 +54,6 @@ const FooterContainer = styled.footer`
     p {
         color: #48575c;
         font-size: 14px;
+        margin: 5px 0;
     }
 `;

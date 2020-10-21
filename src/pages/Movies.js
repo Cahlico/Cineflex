@@ -10,17 +10,22 @@ export default function Movies() {
     console.log(movies)
 
     return (
-        <>
-            <MainTitle>Selecione o filme</MainTitle>
-            <MoviesContainer>
-                {movies.map(movie => (
-                    <MovieImg 
-                        movie = {movie}
-                        key = {movie.title}
-                    />
-                ))}
-            </MoviesContainer>
-        </>
+        <main>
+            {movies.length
+                ? <>
+                    <MainTitle>Selecione o filme</MainTitle>
+                    <MoviesContainer>
+                            {movies.map(movie => (
+                                <MovieImg 
+                                    movie = {movie}
+                                    key = {movie.title}
+                                />
+                            ))}
+                        </MoviesContainer>
+                </>
+                : <Load src='../public/images/load.gif' />
+            }
+        </main>
     );
 }
 
@@ -34,4 +39,10 @@ const MoviesContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     margin: 20px 20px;
+`;
+
+const Load = styled.img`
+    height: 350px;
+    padding-top: 20px;
+    text-align: center;
 `;
