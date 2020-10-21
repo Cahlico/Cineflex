@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { useLocation, useHistory } from "react-router-dom";
+import axios from 'axios';
+import { useLocation, Link, useHistory } from "react-router-dom";
 
 import RenderSeats from '../components/RenderSeats';
 import Footer from '../components/Footer';
@@ -10,7 +11,15 @@ export default function Seats() {
     const { state } = useLocation();
     const history = useHistory();
     const { time, date, id } = state;
+    const hour = time.name
     const seats = time.seats;
+    const [chosenSeats, setChosenSeats] = useState([]);
+
+    function reserveSeats() {
+        if(chosenSeats.length !== 0) {
+            const request = axios.post('https://mock-api.bootcamp.respondeai.com.br/api/v1/cineflex/seats/book_many', { "ids": chosenSeats });
+        }
+    }
 
     return (
         <article>
@@ -21,7 +30,9 @@ export default function Seats() {
                         id={e.id}
                         isAvailable={e.isAvailable}
                         seatNumber={e.name}
-                    key={seats.id}
+                        seats={chosenSeats}
+                        setSeats={setChosenSeats}
+                        key={seats.id}
                     />
                 ))}
             </CineRoom>
@@ -41,11 +52,13 @@ export default function Seats() {
                 </Unavailable>
             </SeatTypes>
 
-            <Button>Reservar assentos</Button>
+            <Link to={{ pathname: '/Checkout', state: {hour, date, id, chosenSeats}}}>
+                <Button onClick={() => reserveSeats()}>Reservar assentos</Button>
+            </Link>
 
             <Footer 
                 id = {id}
-                time = {time.name}
+                time = {hour}
                 date = {date}
             />
         </article>
@@ -66,17 +79,14 @@ const CineRoom = styled.div`
 
 const SeatTypes = styled.div`
     margin-left: 10%;
-
     & ion-icon {
         font-size: 7vw;
         color: #47bfbf;
     }
-
     span {
         display: block;
         position: relative;
     }
-
     p {
         display: inline-block;
         position: absolute;

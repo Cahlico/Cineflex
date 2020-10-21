@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 export default function RenderSeats(props) {
 
-    const { id, isAvailable, seatNumber} = props
-    const [seats, setSeats] = useState([]);
+    const { id, isAvailable, seatNumber, seats, setSeats} = props;
     const [selected, setSelected] = useState(false);
 
     function choseSeats() {
@@ -18,7 +17,7 @@ export default function RenderSeats(props) {
             seats.filter(e => {
                 return e !== id;
             });
-            setSeats(...seats);
+            setSeats([...seats]);
             setSelected(false);
         }
     }
@@ -33,14 +32,12 @@ export default function RenderSeats(props) {
 
 const Seat = styled.div`
     margin: 5px 3px;
-
     ion-icon {
         font-size: 6vw;
         color: ${(props) => props.selected
                                 ? '#47bfbf' : props.isAvailable
                                                 ? '#6dd656' : '#e3364d'};
     }
-
     p {
         font-size: 10px;
         margin-left: 4px;
