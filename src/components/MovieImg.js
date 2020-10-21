@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-export default function MovieImg({ img }) {
+export default function MovieImg({ movie }) {
 
     return (
-        <Image src={img} />
+        <Link to={{ pathname: '/Timetable', state: movie}}>
+            <Image src={movie.posterURL} />
+        </Link>
     );
 }
 

@@ -14,13 +14,14 @@ const AppHeader = styled.header`
     background-color: #c3cdd9;
     text-align: center;
     padding: 10px 0;
-    letter-spacing: 3px;
     position: fixed;
     width: 100vw;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 
     h1 {
-        font-size: 24px;
-        color: #e8773f;
+        font-size: 28px;
+        color: #e3364d;
         font-weight: bold;
+        letter-spacing: 3px;
     }
 `;

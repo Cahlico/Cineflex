@@ -15,8 +15,8 @@ export default function Movies() {
             <MoviesContainer>
                 {movies.map(movie => (
                     <MovieImg 
-                        img={movie.posterURL}
-                        key={movie.title}
+                        movie = {movie}
+                        key = {movie.title}
                     />
                 ))}
             </MoviesContainer>
