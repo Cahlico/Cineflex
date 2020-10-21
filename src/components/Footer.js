@@ -35,13 +35,13 @@ export default function Footer(props) {
 }
 
 const FooterContainer = styled.footer`
-    background-color: #cedbda;
+    background-color: #545152;
     position: fixed;
     bottom: 0;
     right: 0;
     width: 100vw;
     display: flex;
-    border-top: 2px solid #c3cdd9;
+    border-top: 2px solid #383637;
     align-items: center;
 
     img {
@@ -52,7 +52,7 @@ const FooterContainer = styled.footer`
     }
 
     p {
-        color: #48575c;
+        color: #FFF;
         font-size: 14px;
         margin: 5px 0;
     }

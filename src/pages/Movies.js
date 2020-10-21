@@ -15,13 +15,13 @@ export default function Movies() {
                 ? <>
                     <MainTitle>Selecione o filme</MainTitle>
                     <MoviesContainer>
-                            {movies.map(movie => (
-                                <MovieImg 
-                                    movie = {movie}
-                                    key = {movie.title}
-                                />
-                            ))}
-                        </MoviesContainer>
+                        {movies.map(movie => (
+                            <MovieImg 
+                                movie = {movie}
+                                key = {movie.title}
+                            />
+                        ))}
+                    </MoviesContainer>
                 </>
                 : <Load src='../public/images/load.gif' />
             }
@@ -42,7 +42,6 @@ const MoviesContainer = styled.div`
 `;
 
 const Load = styled.img`
-    height: 350px;
-    padding-top: 20px;
-    text-align: center;
+    width: 100vw;
+    padding-top: 50px;
 `;

@@ -1,38 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import Seats from '../pages/Seats';
 
 export default function RenderSeats(props) {
 
-    const { isAvailable, seatNumber} = props
-    console.log(seatNumber);
+    const { id, isAvailable, seatNumber} = props
+    const [seats, setSeats] = useState([]);
+    const [selected, setSelected] = useState(false);
 
+    function choseSeats() {
+
+        if(selected === false) {
+            setSeats([...seats, id]);
+            setSelected(true);
+        }
+
+        else {
+            seats.filter(e => {
+                return e !== id;
+            });
+            setSeats(...seats);
+            setSelected(false);
+        }
+    }
+ 
     return (
-        <>
-            {isAvailable
-            ? <Seat>
-                <ion-icon name="ellipse-outline"></ion-icon>
-                <p>{seatNumber}</p>
-            </Seat>
-            : <Seat>
-                <ion-icon name="ellipse-outline" className='unavailable'></ion-icon>
-                <p>{seatNumber}</p>
-            </Seat>
-            }
-        </>
+         <Seat isAvailable={isAvailable} selected={selected}>
+            <ion-icon name="ellipse" onClick={() => choseSeats()}></ion-icon>
+            <p>{seatNumber}</p>
+        </Seat>
     );
 }
 
 const Seat = styled.div`
-    margin: 5px 5px;
+    margin: 5px 3px;
 
     ion-icon {
-        background-color: #000;
-        border-radius: 50%;
+        font-size: 6vw;
+        color: ${(props) => props.selected
+                                ? '#47bfbf' : props.isAvailable
+                                                ? '#6dd656' : '#e3364d'};
     }
 
     p {
         font-size: 10px;
-        margin-left: 2px;
+        margin-left: 4px;
     }
 `;

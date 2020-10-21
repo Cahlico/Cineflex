@@ -5,6 +5,7 @@ import Header from './Header';
 import Movies from '../pages/Movies';
 import Timetable from '../pages/Timetable';
 import Seats from '../pages/Seats';
+import Checkout from '../pages/Checkout';
 import { MoviesProvider } from '../contexts/MoviesContext';
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
                     <Switch>
                         <Route path="/Timetable" component={Timetable} />
                         <Route path="/Seats" component={Seats} />
+                        <Route path="/Checkout" component={Checkout} />
                         <Route path="/" component={Movies} />
                     </Switch>
                 </Router>

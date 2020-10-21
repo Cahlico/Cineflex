@@ -11,7 +11,7 @@ export default function Header() {
 }
 
 const AppHeader = styled.header`
-    background-color: #c3cdd9;
+    background-color: #383637;
     text-align: center;
     padding: 10px 0;
     position: fixed;
