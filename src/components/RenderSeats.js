@@ -44,7 +44,7 @@ const Seat = styled.div`
         font-size: 4vw;
         font-weight: bold;
         position: absolute;
-        top: 8px;
+        top: 9px;
         right: 8px;
         color: #FFF
     }

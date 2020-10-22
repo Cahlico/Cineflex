@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
-import { useLocation, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import RenderSeats from '../components/RenderSeats';
 import Footer from '../components/Footer';
 import SeatTypes from '../components/SeatTypes';
+import Tickets from '../components/Tickets';
 
 export default function Seats() {
 
@@ -14,12 +14,7 @@ export default function Seats() {
     const hour = time.name
     const seats = time.seats;
     const [chosenSeats, setChosenSeats] = useState([]);
-
-    function reserveSeats() {
-        if(chosenSeats.length !== 0) {
-            const request = axios.post('https://mock-api.bootcamp.respondeai.com.br/api/v1/cineflex/seats/book_many', { "ids": chosenSeats });
-        }
-    }
+    const [openTickets, setOpenTickets] = useState(false);
 
     return (
         <article>
@@ -37,13 +32,17 @@ export default function Seats() {
                 ))}
             </CineRoom>
 
-            <SeatTypes>
-                
-            </SeatTypes>
+            <SeatTypes />
 
-            <Link to={{ pathname: '/Checkout', state: {hour, date, id, chosenSeats}}}>
-                <Button onClick={() => reserveSeats()}>Reservar assentos</Button>
-            </Link>
+            <Button onClick={() => setOpenTickets(true)}>Reservar assentos</Button>
+            <Tickets
+                openTickets={openTickets}
+                setOpenTickets={setOpenTickets}
+                chosenSeats={chosenSeats}
+                id = {id}
+                time = {hour}
+                date = {date}
+            />
 
             <Footer 
                 id = {id}
@@ -71,7 +70,7 @@ export const Button = styled.button`
     color: #FFF;
     background-color: #e3364d;
     padding: .5em 0;
-    width: 60vw;
+    width: 60%;
     border-radius: 3px;
     margin: 20px 20%;
     outline-style: none;

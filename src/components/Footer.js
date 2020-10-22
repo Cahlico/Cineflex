@@ -46,6 +46,7 @@ const FooterContainer = styled.footer`
     display: flex;
     border-top: 2px solid #383637;
     align-items: center;
+    z-index: 10;
 
     img {
         margin: 5px 15px;
