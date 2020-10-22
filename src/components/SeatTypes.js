@@ -23,8 +23,10 @@ export default function SeatTypes() {
 const SeatStyle = styled.div`
     margin-left: 10%;
     & ion-icon {
-        font-size: 7vw;
+        font-size: 6vw;
         color: #47bfbf;
+        border: 2px solid #47bfbf;
+        border-radius: 50%;
     }
     span {
         display: block;
@@ -40,14 +42,16 @@ const SeatStyle = styled.div`
 
 const Available = styled.span`
     & ion-icon {
-        font-size: 7vw;
+        font-size: 6vw;
         color: #6dd656;
+        border-color: #6dd656;
     }
 `;
 
 const Unavailable = styled.span`
     & ion-icon {
-        font-size: 7vw;
+        font-size: 6vw;
         color: #e3364d;
+        border-color: #e3364d;
     }
 `;

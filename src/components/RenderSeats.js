@@ -8,12 +8,14 @@ export default function RenderSeats(props) {
 
     function choseSeats() {
 
+        if(isAvailable === false) {
+            return;
+        }
+
         if(selected === false) {
             setSeats([...seats, id]);
             setSelected(true);
-        }
-
-        else {
+        } else {
             const filteredSeats = seats.filter(e => {
                 return e !== id;
             });

@@ -64,7 +64,7 @@ export default function Tickets(props) {
                         <Button onClick={() => reserveSeats()}>Confirmar compra</Button>
                     </Link>
                 </>
-                : <p>Nenhum assento selecionado</p>
+                : <span><p>Nenhum assento selecionado</p></span>
                 }
             </TicketsPage>
 

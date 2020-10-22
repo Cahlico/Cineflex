@@ -30,6 +30,7 @@ export default function Seats() {
                         key={seats.id}
                     />
                 ))}
+                <Screen />
             </CineRoom>
 
             <SeatTypes />
@@ -63,6 +64,14 @@ const CineRoom = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     margin: 20px 1%;
+`;
+
+const Screen = styled.div`
+    width: 95%;
+    background-color: #383637;
+    color: #FFF;
+    height: 5px;
+    border-radius: 3px;
 `;
 
 export const Button = styled.button`
