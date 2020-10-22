@@ -30,7 +30,7 @@ export default function Movies() {
 }
 
 const MainTitle = styled.h2`
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
 `;
 

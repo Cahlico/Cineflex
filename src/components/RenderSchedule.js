@@ -21,13 +21,14 @@ export default function RenderSchedule(props) {
 
 const Date = styled.p`
     padding: 20px 20px;
+    font-size: 20px
 `;
 
 const Button = styled.button`
     border: none;
     color: #FFF;
     background-color: #e3364d;
-    padding: .5em .7em;
+    padding: .8em 1em;
     border-radius: 3px;
     margin: 0 20px;
     outline-style: none;

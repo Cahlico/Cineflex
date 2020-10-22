@@ -50,22 +50,22 @@ const FooterContainer = styled.footer`
 
     img {
         margin: 5px 15px;
-        height: 50px;
+        height: 8vh;
         border-radius: 3px;
         border: 4px solid #FFF;
     }
 
     p {
         color: #FFF;
-        font-size: 14px;
+        font-size: 18px;
         margin: 5px 0;
     }
 
     ion-icon {
         position: fixed;
         color: #FFF;
-        font-size: 18px;
-        bottom: 42px;
+        font-size: 22px;
+        bottom: 7%;
         right: 10px;
     }
 `;

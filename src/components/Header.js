@@ -22,7 +22,7 @@ const AppHeader = styled.header`
     z-index: 10;
 
     h1 {
-        font-size: 28px;
+        font-size: 36px;
         color: #e3364d;
         font-weight: bold;
         letter-spacing: 3px;

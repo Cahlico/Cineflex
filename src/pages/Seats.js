@@ -55,7 +55,7 @@ export default function Seats() {
 }
 
 const SeatsTitle = styled.h2`
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
 `;
 
@@ -63,7 +63,7 @@ const CineRoom = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px 1%;
+    margin: 15px 1%;
 `;
 
 const Screen = styled.div`

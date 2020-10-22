@@ -12,7 +12,7 @@ export default function MovieImg({ movie }) {
 }
 
 const Image = styled.img`
-    height: 150px;
+    width: 30vw;
     margin: 10px 15px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     border-radius: 3px;

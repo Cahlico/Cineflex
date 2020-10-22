@@ -45,7 +45,7 @@ export default function Checkout() {
 }
 
 const SuccessMessage = styled.h2`
-    font-size: 24px;
+    font-size: 26px;
     text-align: center;
     margin: 0 23%;
 `;
@@ -66,7 +66,7 @@ const MovieConfirmation = styled.div`
 
     span strong {
         display: block;
-        font-size: 16px;
+        font-size: 18px;
         padding: 10px; 
     }
 `;

@@ -35,7 +35,7 @@ export default function Timetable() {
 }
 
 const ScheduleTitle = styled.h2`
-    font-size: 20px;
+    font-size: 24px;
     text-align: center; 
 `;
 

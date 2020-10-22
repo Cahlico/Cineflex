@@ -85,7 +85,7 @@ const TicketsPage = styled.div`
     transition: .4s ease-in-out;
 
     h2 {
-        font-size: 20px;
+        font-size: 22px;
         font-weight: bold;
     }
 
@@ -97,7 +97,7 @@ const TicketsPage = styled.div`
 
     ion-icon {
         color: #e3364d;
-        font-size: 20px;
+        font-size: 22px;
     }
 `;
 
