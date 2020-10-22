@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
 
 import MoviesContext from '../contexts/MoviesContext';
 
 export default function Footer(props) {
 
+    const history = useHistory();
     const { id, time, date} = props;
     let imgSrc;
     let title;
@@ -30,12 +32,13 @@ export default function Footer(props) {
                 : ''
                 }
             </span>
+            <ion-icon name="return-up-back-outline" onClick={() => history.goBack()}></ion-icon>
         </FooterContainer>
     );
 }
 
 const FooterContainer = styled.footer`
-    background-color: #545152;
+    background-color: #454545;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -45,15 +48,23 @@ const FooterContainer = styled.footer`
     align-items: center;
 
     img {
-        margin: 10px 15px;
+        margin: 5px 15px;
         height: 50px;
         border-radius: 3px;
-        border: 5px solid #FFF;
+        border: 4px solid #FFF;
     }
 
     p {
         color: #FFF;
         font-size: 14px;
         margin: 5px 0;
+    }
+
+    ion-icon {
+        position: fixed;
+        color: #FFF;
+        font-size: 18px;
+        bottom: 42px;
+        right: 10px;
     }
 `;

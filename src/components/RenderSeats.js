@@ -14,32 +14,38 @@ export default function RenderSeats(props) {
         }
 
         else {
-            seats.filter(e => {
+            const filteredSeats = seats.filter(e => {
                 return e !== id;
             });
-            setSeats([...seats]);
+            setSeats([...filteredSeats]);
             setSelected(false);
         }
     }
  
     return (
-         <Seat isAvailable={isAvailable} selected={selected}>
-            <ion-icon name="ellipse" onClick={() => choseSeats()}></ion-icon>
+         <Seat isAvailable={isAvailable} selected={selected} onClick={() => choseSeats()}>
+            <ion-icon name="square"></ion-icon>
             <p>{seatNumber}</p>
         </Seat>
     );
 }
 
 const Seat = styled.div`
-    margin: 5px 3px;
+    margin: 5px 1px;
+    position: relative;
+
     ion-icon {
-        font-size: 6vw;
+        font-size: 9vw;
         color: ${(props) => props.selected
                                 ? '#47bfbf' : props.isAvailable
                                                 ? '#6dd656' : '#e3364d'};
     }
     p {
-        font-size: 10px;
-        margin-left: 4px;
+        font-size: 4vw;
+        font-weight: bold;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        color: #FFF
     }
 `;

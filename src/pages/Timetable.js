@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import RenderSchedule from '../components/RenderSchedule';
 import Footer from '../components/Footer';
@@ -8,7 +8,6 @@ import Footer from '../components/Footer';
 export default function Timetable() {
 
     const { state } = useLocation();
-    const history = useHistory();
     const timeTable = state.days;
 
     return (

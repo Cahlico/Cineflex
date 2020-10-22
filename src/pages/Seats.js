@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { useLocation, Link, useHistory } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 import RenderSeats from '../components/RenderSeats';
 import Footer from '../components/Footer';
+import SeatTypes from '../components/SeatTypes';
 
 export default function Seats() {
 
     const { state } = useLocation();
-    const history = useHistory();
     const { time, date, id } = state;
     const hour = time.name
     const seats = time.seats;
@@ -38,18 +38,7 @@ export default function Seats() {
             </CineRoom>
 
             <SeatTypes>
-                <span>
-                    <ion-icon name="ellipse"></ion-icon>
-                    <p>Selecionado</p>
-                </span>
-                <Available>
-                    <ion-icon name="ellipse"></ion-icon>
-                    <p>Disponível</p>
-                </Available>
-                <Unavailable>
-                    <ion-icon name="ellipse"></ion-icon>
-                    <p>Indisponível</p>
-                </Unavailable>
+                
             </SeatTypes>
 
             <Link to={{ pathname: '/Checkout', state: {hour, date, id, chosenSeats}}}>
@@ -74,42 +63,10 @@ const CineRoom = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px 10%;
+    margin: 20px 1%;
 `;
 
-const SeatTypes = styled.div`
-    margin-left: 10%;
-    & ion-icon {
-        font-size: 7vw;
-        color: #47bfbf;
-    }
-    span {
-        display: block;
-        position: relative;
-    }
-    p {
-        display: inline-block;
-        position: absolute;
-        top: 4px;
-        left: 30px;
-    }
-`;
-
-const Available = styled.span`
-    & ion-icon {
-        font-size: 7vw;
-        color: #6dd656;
-    }
-`;
-
-const Unavailable = styled.span`
-    & ion-icon {
-        font-size: 7vw;
-        color: #e3364d;
-    }
-`;
-
-const Button = styled.button`
+export const Button = styled.button`
     border: none;
     color: #FFF;
     background-color: #e3364d;

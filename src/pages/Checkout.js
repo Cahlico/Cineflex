@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useLocation, Link } from "react-router-dom";
 
 import MoviesContext from '../contexts/MoviesContext';
+import { Button } from './Seats';
 
 export default function Checkout() {
 
@@ -35,6 +36,10 @@ export default function Checkout() {
                     <p>Assento: {seat}</p>
                 ))}
             </Seats>
+
+            <Link to='/'>
+                <Button>HOME</Button>
+            </Link>
         </>
     );
 }
@@ -50,7 +55,9 @@ const MovieConfirmation = styled.div`
     display: flex;
 
     img {
-        height: 160px;
+        width: 45vw;
+        border-radius: 3px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     }
 
     span {
@@ -59,13 +66,14 @@ const MovieConfirmation = styled.div`
 
     span strong {
         display: block;
-        font-size: 14px;
+        font-size: 16px;
         padding: 10px; 
     }
 `;
 
 const Seats = styled.div`
     display: flex;
+    flex-wrap: wrap;
     margin: 20px;
 
     p {
