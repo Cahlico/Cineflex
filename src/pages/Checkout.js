@@ -32,9 +32,43 @@ export default function Checkout() {
             </MovieConfirmation>
             <Seats>
                 {chosenSeats.map(seat => (
-                    <p>Assento {seat}</p>
+                    <p>Assento: {seat}</p>
                 ))}
             </Seats>
         </>
     );
 }
+
+const SuccessMessage = styled.h2`
+    font-size: 24px;
+    text-align: center;
+    margin: 0 23%;
+`;
+
+const MovieConfirmation = styled.div`
+    margin: 20px 20px;
+    display: flex;
+
+    img {
+        height: 160px;
+    }
+
+    span {
+        flex-wrap: wrap;
+    }
+
+    span strong {
+        display: block;
+        font-size: 14px;
+        padding: 10px; 
+    }
+`;
+
+const Seats = styled.div`
+    display: flex;
+    margin: 20px;
+
+    p {
+        margin-right: 10px;
+    }
+`;
