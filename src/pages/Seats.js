@@ -94,4 +94,9 @@ export const Button = styled.button`
     border-radius: 3px;
     margin: 20px 20%;
     outline-style: none;
+
+    &.homeButton {
+        width: 40%;
+        margin: 20px 30%;
+    }
 `;

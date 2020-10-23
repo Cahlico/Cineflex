@@ -38,7 +38,7 @@ export default function Checkout() {
             </Seats>
 
             <Link to='/'>
-                <Button>HOME</Button>
+                <Button className='homeButton'>HOME</Button>
             </Link>
         </>
     );
