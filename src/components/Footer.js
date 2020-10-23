@@ -68,4 +68,11 @@ const FooterContainer = styled.footer`
         bottom: 7%;
         right: 10px;
     }
+
+    @media (min-width: 601px) {
+        img {
+            margin: 5px 2vw;
+            height: 10vh;
+        }
+    }
 `;

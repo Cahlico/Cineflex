@@ -34,8 +34,9 @@ export default function Seats() {
             </CineRoom>
 
             <SeatTypes />
-
-            <Button onClick={() => setOpenTickets(true)}>Reservar assentos</Button>
+            <nav>
+                <Button onClick={() => setOpenTickets(true)}>Reservar assentos</Button>
+            </nav>
             <Tickets
                 openTickets={openTickets}
                 setOpenTickets={setOpenTickets}
@@ -57,6 +58,11 @@ export default function Seats() {
 const SeatsTitle = styled.h2`
     font-size: 24px;
     text-align: center;
+
+    @media (min-width: 601px) {
+        text-align: left;
+        margin-left: 8%;
+    }
 `;
 
 const CineRoom = styled.div`
@@ -64,6 +70,11 @@ const CineRoom = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     margin: 15px 1%;
+
+
+    @media (min-width: 601px) {
+        width: 40vw;
+    }
 `;
 
 const Screen = styled.div`

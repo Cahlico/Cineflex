@@ -12,8 +12,12 @@ export default function MovieImg({ movie }) {
 }
 
 const Image = styled.img`
-    width: 30vw;
+    width: 15vw;
     margin: 10px 15px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     border-radius: 3px;
+
+    @media (max-width: 600px) {
+        width: 30vw;
+    }
 `;

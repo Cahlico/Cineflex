@@ -38,6 +38,19 @@ const SeatStyle = styled.div`
         top: 4px;
         left: 30px;
     }
+
+    @media (min-width: 601px) {
+        margin-left: 2%;
+
+        p {
+            top: 9px;
+            left: 3%;
+        }
+
+        & ion-icon {
+            font-size: 2vw;
+        }
+    }
 `;
 
 const Available = styled.span`
@@ -46,6 +59,12 @@ const Available = styled.span`
         color: #6dd656;
         border-color: #6dd656;
     }
+
+    @media (min-width: 601px) {
+        & ion-icon {
+            font-size: 2vw;
+        }
+    }
 `;
 
 const Unavailable = styled.span`
@@ -53,5 +72,12 @@ const Unavailable = styled.span`
         font-size: 6vw;
         color: #e3364d;
         border-color: #e3364d;
+    }
+
+
+    @media (min-width: 601px) {
+        & ion-icon {
+            font-size: 2vw;
+        }
     }
 `;

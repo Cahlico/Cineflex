@@ -42,6 +42,12 @@ const MoviesContainer = styled.div`
 `;
 
 const Load = styled.img`
-    width: 100vw;
+    width: 40vw;
+    margin-left: 30vw;
     padding-top: 50px;
+
+    @media (max-width: 600px) {
+        width: 100vw;
+        margin: 0;
+    }
 `;

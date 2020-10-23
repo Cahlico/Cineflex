@@ -50,4 +50,15 @@ const Seat = styled.div`
         right: 8px;
         color: #FFF
     }
+
+
+    @media (min-width: 601px) {
+        ion-icon {
+            font-size: 3.7vw;
+        }
+
+        p {
+            font-size: 1.5vw;
+        }
+    }
 `;

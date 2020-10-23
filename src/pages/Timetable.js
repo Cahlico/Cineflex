@@ -41,4 +41,7 @@ const ScheduleTitle = styled.h2`
 
 const Schedule = styled.div`
     padding-bottom: 90px;
+    @media(min-width: 601px) {
+        text-align: center;
+    }
 `;

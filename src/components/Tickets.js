@@ -99,6 +99,19 @@ const TicketsPage = styled.div`
         color: #e3364d;
         font-size: 22px;
     }
+
+    @media (min-width: 601px) {
+        left: 43vw;
+
+        ion-icon {
+            margin-right: 21%;
+        }
+
+        button {
+            position: absolute;
+            right: 7vw;
+        }
+    }
 `;
 
 const TicketsFilm = styled.div`

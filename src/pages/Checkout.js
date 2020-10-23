@@ -69,6 +69,13 @@ const MovieConfirmation = styled.div`
         font-size: 18px;
         padding: 10px; 
     }
+
+    @media (min-width: 601px) {
+        justify-content: center;
+        img {
+            width: 20vw;
+        }
+    }
 `;
 
 const Seats = styled.div`
@@ -78,5 +85,9 @@ const Seats = styled.div`
 
     p {
         margin-right: 10px;
+    }
+
+    @media (min-width: 601px) {
+        margin: 0 35%;
     }
 `;
