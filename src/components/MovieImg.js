@@ -6,7 +6,7 @@ export default function MovieImg({ movie }) {
 
     return (
         <Link to={{ pathname: '/Timetable', state: movie}}>
-            <Image src={movie.posterURL} />
+            <Image src={movie.posterURL} alt={movie.title}/>
         </Link>
     );
 }

@@ -23,7 +23,7 @@ export default function Footer(props) {
     return (
         <FooterContainer>
             <span>
-                <img src={imgSrc} />
+                <img src={imgSrc} alt={title}/>
             </span>
             <span>
                 <p>{title}</p>

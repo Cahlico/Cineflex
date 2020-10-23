@@ -24,7 +24,7 @@ export default function Checkout() {
         <>
             <SuccessMessage>Pedido feito com sucesso</SuccessMessage>
             <MovieConfirmation>
-                <img src={imgSrc} />
+                <img src={imgSrc} alt={title}/>
                 <span>
                     <strong>{title}</strong>
                     <strong>{date}</strong>
