@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
 import { useLocation, Link } from "react-router-dom";
-
+import { SuccessMessage, MovieConfirmation, Seats } from '../styles/checkoutStyles';
 import MoviesContext from '../contexts/MoviesContext';
-import { Button } from './Seats';
+import { Button } from '../styles/seatStyles';
 
 export default function Checkout() {
 
@@ -43,51 +42,3 @@ export default function Checkout() {
         </>
     );
 }
-
-const SuccessMessage = styled.h2`
-    font-size: 26px;
-    text-align: center;
-    margin: 0 23%;
-`;
-
-const MovieConfirmation = styled.div`
-    margin: 20px 20px;
-    display: flex;
-
-    img {
-        width: 45vw;
-        border-radius: 3px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    span {
-        flex-wrap: wrap;
-    }
-
-    span strong {
-        display: block;
-        font-size: 18px;
-        padding: 10px; 
-    }
-
-    @media (min-width: 601px) {
-        justify-content: center;
-        img {
-            width: 20vw;
-        }
-    }
-`;
-
-const Seats = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px;
-
-    p {
-        margin-right: 10px;
-    }
-
-    @media (min-width: 601px) {
-        margin: 0 35%;
-    }
-`;

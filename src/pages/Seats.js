@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { useLocation } from "react-router-dom";
-
 import RenderSeats from '../components/RenderSeats';
 import Footer from '../components/Footer';
 import SeatTypes from '../components/SeatTypes';
 import Tickets from '../components/Tickets';
+import { SeatsTitle, CineRoom, Screen, Button } from '../styles/seatStyles';
 
 export default function Seats() {
 
@@ -54,49 +53,3 @@ export default function Seats() {
         </article>
     );
 }
-
-const SeatsTitle = styled.h2`
-    font-size: 24px;
-    text-align: center;
-
-    @media (min-width: 601px) {
-        text-align: left;
-        margin-left: 8%;
-    }
-`;
-
-const CineRoom = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 15px 1%;
-
-
-    @media (min-width: 601px) {
-        width: 40vw;
-    }
-`;
-
-const Screen = styled.div`
-    width: 95%;
-    background-color: #383637;
-    color: #FFF;
-    height: 5px;
-    border-radius: 3px;
-`;
-
-export const Button = styled.button`
-    border: none;
-    color: #FFF;
-    background-color: #e3364d;
-    padding: .5em 0;
-    width: 60%;
-    border-radius: 3px;
-    margin: 20px 20%;
-    outline-style: none;
-
-    &.homeButton {
-        width: 40%;
-        margin: 20px 30%;
-    }
-`;
