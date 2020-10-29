@@ -7,7 +7,6 @@ import MovieImg from '../components/MovieImg';
 export default function Movies() {
 
     const { movies } = useContext(MoviesContext);
-    console.log(movies)
 
     return (
         <main>
