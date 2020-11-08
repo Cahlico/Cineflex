@@ -1,4 +1,4 @@
-# 09-cineflex
+# Cineflex
 
 <p align="center">
   <img src='./public/images/Multimedia.ico' width="175" alt="Cineflex" />
@@ -6,7 +6,7 @@
 
 ## Objective
 <p>
-   This project was developed throughout the Bootcamp of "Respode Aí", is a Single-Page Application project for cinema seating reservation, using React. The user can choose a movie, the session,the seats, the type of tickets and then go to the checkout page.
+   This project was developed throughout the Bootcamp of "Respode Aí", it is a Single-Page Application project for cinema seating reservation, using React. The user can choose a movie, the session,the seats, the type of tickets and then go to the checkout page.
 </p>
 
 ### Features
