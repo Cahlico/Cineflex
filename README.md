@@ -38,7 +38,7 @@ The following tools and frameworks were used in the construction of the project:
     <img src='https://img.shields.io/badge/styled-components%20-%2320232a.svg?&style=for-the-badge&logo=styled-components&logoColor=%2361DAFB'>
 
 #Folow the link project.
-- [Link](https://cahlico.github.io/)
+- [Link](https://cahlico.github.io/Cineflex/)
 ### Contributors
 <a href="https://www.respondeai.com.br/">
 <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/69740567?s=60&v=4" width="100px;"/>
