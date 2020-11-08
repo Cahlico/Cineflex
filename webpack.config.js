@@ -19,5 +19,13 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'public'),
+    publicPath: "/",
+    compress: true,
+    port: 9000,
+    historyApiFallback: true,
+  },
+  mode: process.env.NODE_ENV === "production" ? "production" : "development"
 };

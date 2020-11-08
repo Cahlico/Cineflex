@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/Cahlico/09-cineflexstatic/js/main.3e13b298.chunk.js",
+    "main.js.map": "/Cahlico/09-cineflexstatic/js/main.3e13b298.chunk.js.map",
+    "runtime-main.js": "/Cahlico/09-cineflexstatic/js/runtime-main.633d9479.js",
+    "runtime-main.js.map": "/Cahlico/09-cineflexstatic/js/runtime-main.633d9479.js.map",
+    "static/js/2.583a8c24.chunk.js": "/Cahlico/09-cineflexstatic/js/2.583a8c24.chunk.js",
+    "static/js/2.583a8c24.chunk.js.map": "/Cahlico/09-cineflexstatic/js/2.583a8c24.chunk.js.map",
+    "index.html": "/Cahlico/09-cineflexindex.html",
+    "static/js/2.583a8c24.chunk.js.LICENSE.txt": "/Cahlico/09-cineflexstatic/js/2.583a8c24.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.633d9479.js",
+    "static/js/2.583a8c24.chunk.js",
+    "static/js/main.3e13b298.chunk.js"
+  ]
+}
